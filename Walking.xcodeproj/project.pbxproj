@@ -11,6 +11,12 @@
 		02DE46D1256D5376007EE31C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE46D0256D5376007EE31C /* ContentView.swift */; };
 		02DE46D3256D5383007EE31C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DE46D2256D5383007EE31C /* Assets.xcassets */; };
 		02DE46D6256D5383007EE31C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DE46D5256D5383007EE31C /* Preview Assets.xcassets */; };
+		02DE46DF256D5EE4007EE31C /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE46DE256D5EE4007EE31C /* HealthStore.swift */; };
+		02DE46E5256D8CCB007EE31C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DE46E4256D8CCB007EE31C /* HealthKit.framework */; };
+		02DE46E8256D8EC5007EE31C /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE46E7256D8EC5007EE31C /* extensions.swift */; };
+		02DE46EC256D94E7007EE31C /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE46EB256D94E7007EE31C /* Step.swift */; };
+		02DE46F0256EAA06007EE31C /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE46EF256EAA06007EE31C /* GraphView.swift */; };
+		02F6357C258FFD71008AB72B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F6357B258FFD70008AB72B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,13 @@
 		02DE46D2256D5383007EE31C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02DE46D5256D5383007EE31C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		02DE46D7256D5383007EE31C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02DE46DE256D5EE4007EE31C /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
+		02DE46E2256D8CCB007EE31C /* Walking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Walking.entitlements; sourceTree = "<group>"; };
+		02DE46E4256D8CCB007EE31C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		02DE46E7256D8EC5007EE31C /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		02DE46EB256D94E7007EE31C /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		02DE46EF256EAA06007EE31C /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		02F6357B258FFD70008AB72B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02DE46E5256D8CCB007EE31C /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +52,7 @@
 			children = (
 				02DE46CD256D5376007EE31C /* Walking */,
 				02DE46CC256D5376007EE31C /* Products */,
+				02DE46E3256D8CCB007EE31C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,11 +67,17 @@
 		02DE46CD256D5376007EE31C /* Walking */ = {
 			isa = PBXGroup;
 			children = (
+				02F6357A258FFC5E008AB72B /* Utilities */,
+				02DE46EE256EA9EA007EE31C /* Views */,
+				02DE46EA256D94C5007EE31C /* Models */,
+				02DE46E2256D8CCB007EE31C /* Walking.entitlements */,
 				02DE46CE256D5376007EE31C /* WalkingApp.swift */,
 				02DE46D0256D5376007EE31C /* ContentView.swift */,
+				02DE46DE256D5EE4007EE31C /* HealthStore.swift */,
 				02DE46D2256D5383007EE31C /* Assets.xcassets */,
 				02DE46D7256D5383007EE31C /* Info.plist */,
 				02DE46D4256D5383007EE31C /* Preview Content */,
+				02DE46E7256D8EC5007EE31C /* extensions.swift */,
 			);
 			path = Walking;
 			sourceTree = "<group>";
@@ -67,6 +88,38 @@
 				02DE46D5256D5383007EE31C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		02DE46E3256D8CCB007EE31C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02DE46E4256D8CCB007EE31C /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		02DE46EA256D94C5007EE31C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				02DE46EB256D94E7007EE31C /* Step.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		02DE46EE256EA9EA007EE31C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				02DE46EF256EAA06007EE31C /* GraphView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		02F6357A258FFC5E008AB72B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				02F6357B258FFD70008AB72B /* Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +192,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				02DE46D1256D5376007EE31C /* ContentView.swift in Sources */,
+				02DE46DF256D5EE4007EE31C /* HealthStore.swift in Sources */,
+				02DE46EC256D94E7007EE31C /* Step.swift in Sources */,
 				02DE46CF256D5376007EE31C /* WalkingApp.swift in Sources */,
+				02DE46E8256D8EC5007EE31C /* extensions.swift in Sources */,
+				02DE46F0256EAA06007EE31C /* GraphView.swift in Sources */,
+				02F6357C258FFD71008AB72B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Walking/Walking.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Walking/Preview Content\"";
 				DEVELOPMENT_TEAM = S9H4B38ZQN;
@@ -289,6 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Walking/Walking.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Walking/Preview Content\"";
 				DEVELOPMENT_TEAM = S9H4B38ZQN;
